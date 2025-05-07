@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:18' // ใช้ Docker image ที่มี Node.js ติดตั้งแล้ว
+        }
+    }
 
     environment {
         FIREBASE_PROJECT = 'webapp-31a99'
@@ -42,10 +46,10 @@ pipeline {
 
     post {
         success {
-            echo 'Deployment succeeded.'
+            echo '✅ Deployment succeeded.'
         }
         failure {
-            echo 'Deployment failed.'
+            echo '❌ Deployment failed.'
         }
     }
 }
