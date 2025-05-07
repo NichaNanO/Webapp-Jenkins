@@ -18,7 +18,7 @@ pipeline {
 
         stage('Install') {
             steps {
-                dir('frontend') {
+                dir('auto-deploy') {
                     echo "Installing dependencies..."
                     sh 'npm install'
                 }
@@ -27,7 +27,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                dir('frontend') {
+                dir('auto-deploy') {
                     echo "Building React project..."
                     sh 'npm run build'
                 }
@@ -36,7 +36,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                dir('frontend') {
+                dir('auto-deploy') {
                     echo "Running tests..."
                     sh 'npm test'
                 }
