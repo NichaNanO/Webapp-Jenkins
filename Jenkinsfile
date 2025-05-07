@@ -47,7 +47,7 @@ pipeline {
 
         stage('Deploy') {
     steps {
-        dir('frontend') {
+        dir('auto-deploy') {
             echo "Deploying to Firebase Hosting..."
             sh 'npm install -g firebase-tools' // ติดตั้ง firebase-tools ใน Jenkins agent
             sh "firebase deploy --only hosting --token ${FIREBASE_TOKEN}"
