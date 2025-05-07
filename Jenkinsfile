@@ -6,7 +6,9 @@ pipeline {
     }
 
     environment {
-        FIREBASE_PROJECT = 'webapp-31a99'    }
+    FIREBASE_TOKEN = credentials('0e8385b0-5e1d-4cd5-be05-dc2fda4c43db') // ถ้าคุณใช้ Jenkins Credentials plugin
+}
+
 
     stages {
         stage('Clone') {
