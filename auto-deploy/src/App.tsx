@@ -1,23 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>🚀 Auto Deploy React App</h1>
+        <p>CI/CD ด้วย Jenkins + Firebase + Docker</p>
+
+        <div className="button-group">
+          <a
+            className="App-button"
+            href="https://github.com/NichaNanO/Webapp-Jenkins.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ดูโปรเจกต์บน GitHub
+          </a>
+        </div>
       </header>
     </div>
   );
